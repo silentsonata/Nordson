@@ -717,12 +717,14 @@ StScrollBar {
 /* TOP BAR */
 #panel {
   background-gradient-direction: none;
-  background-color: #1d2128;
+  background-color: rgba(29, 33, 40, .9);
   /* transition from solid to transparent */
   transition-duration: 500ms;
   font-weight: bold;
-  height: 2.1em;
-  padding: 0px 0px; }
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, .2);
+  height: 2.2em;
+  border-radius: 5px;
+  margin: 2px 40px; }
   #panel.unlock-screen, #panel.login-screen, #panel.lock-screen {
     background-color: transparent; }
   #panel #panelLeft, #panel #panelCenter {
@@ -741,9 +743,12 @@ StScrollBar {
   #panel .panel-button {
     -natural-hpadding: 12px;
     -minimum-hpadding: 6px;
+    border-radius: 10px;
     font-weight: bold;
     color: #d8dee9;
     transition-duration: 100ms; }
+    #panel .panel-button.clock-display .clock {
+      border-radius: 10px; }
     #panel .panel-button .app-menu-icon {
       -st-icon-style: symbolic;
       margin-left: 4px;
@@ -1283,6 +1288,7 @@ StScrollBar {
 
 /* DASHBOARD */
 .dash-background {
+  border-radius: 10px;
   background-color: #232831; }
 
 .dash-separator {
